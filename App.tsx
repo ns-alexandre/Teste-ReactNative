@@ -4,7 +4,7 @@ import { View, Text, StyleSheet, FlatList, ActivityIndicator, StatusBar, Pressab
 import { useSpaceNews } from './src/hooks/useSpaceNews';
 import { ArticleItem } from './src/components/ArticleItem';
 
-// Tela principal do app
+// Menu principal do app
 export default function App() {
   const { news, loading, error, refetch } = useSpaceNews();
 
