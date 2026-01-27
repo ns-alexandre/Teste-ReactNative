@@ -10,11 +10,11 @@ export interface Article {
   url: string;
 }
 
+// Hook personalizado para buscar notícias espaciais
 export const useSpaceNews = () => {
   const [news, setNews] = useState<Article[]>([]);
-  // Apostilas costumam tratar erro com console.log ou catch simples, então mantive esse padrão
   const [loading, setLoading] = useState(true);
-
+// Função para buscar notícias da API
   const fetchNews = async () => {
     try {
       const response = await api.get('/articles/');
