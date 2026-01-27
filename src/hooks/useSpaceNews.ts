@@ -1,7 +1,7 @@
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import api from '../services/api';
 
-// Definindo a interface aqui (Padrão TypeScript)
+//Definindo uma notícia
 export interface Article {
   id: number;
   title: string;
@@ -10,25 +10,29 @@ export interface Article {
   url: string;
 }
 
-// Hook personalizado para buscar notícias espaciais
 export const useSpaceNews = () => {
   const [news, setNews] = useState<Article[]>([]);
   const [loading, setLoading] = useState(true);
-// Função para buscar notícias da API
-  const fetchNews = async () => {
+  const [error, setError] = useState(false);
+
+  // Busca notícias na API
+  const fetchArticles = async () => {
     try {
-      const response = await api.get('/articles/');
+      setLoading(true); 
+      setError(false);
+      const response = await api.get('/');
       setNews(response.data.results);
-    } catch (error) {
-      console.log("Erro na busca: ", error);
+    } catch (err) {
+      console.log(err);
+      setError(true);
     } finally {
       setLoading(false);
     }
   };
 
   useEffect(() => {
-    fetchNews();
+    fetchArticles();
   }, []);
 
-  return {news, loading};
+  return {news, loading, error, refetch: fetchArticles};
 };
