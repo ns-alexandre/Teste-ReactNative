@@ -10,12 +10,12 @@ Desafio de desenvolvimento de um aplicativo em React Native que consome uma API 
 
 1. Clonar o repositório:
 ```
-git clone https://github.com/ns-alexandre/Teste-ReactN.git
+git clone https://github.com/ns-alexandre/Teste-ReactNative.git
 ```
 
 2. Entrar na pasta:
 ```
-cd Teste-ReactN
+cd Teste-ReactNative
 ```
 
 3. Instalar as dependências:
