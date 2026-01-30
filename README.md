@@ -3,29 +3,32 @@ Desafio de desenvolvimento de um aplicativo em React Native que consome uma API 
 
 ## Instruções para rodar o projeto
 
-1. Instalar o [Node.js](https://nodejs.org/pt-br/download/current.)
+0.5. Pré-requisitos:
+- Instalar o [Node.js](https://nodejs.org/pt-br/download/current.)
+- Instalar o [Git](https://git-scm.com/install/windows)
+- (Opcional: Instalar o App Expo GO no [Google Play](https://play.google.com/store/apps/details?id=host.exp.exponent&pcampaignid=web_share) ou [App Store](https://apps.apple.com/br/app/expo-go/id982107779))
 
-2. Clonar o repositório:
+1. Clonar o repositório:
 ```
 git clone https://github.com/ns-alexandre/Teste-ReactN.git
 ```
 
-3. Entrar na pasta:
+2. Entrar na pasta:
 ```
 cd Teste-ReactN
 ```
 
-4. Instale as dependências:
+3. Instalar as dependências:
 ```
 npm install
 ```
 
-5. Iniciar o projeto:
+4. Iniciar o projeto:
 ```
 npx expo start
 ```
 
-6. Abrir no navegador (tecla W) ou no app Expo Go no celular.
+5. Abrir no navegador (tecla W) ou no app Expo Go no celular.
 
 ## API utilizada
 [Spaceflight News API](https://api.spaceflightnewsapi.net/v4/articles/)
